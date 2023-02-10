@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        /* text-align: center; */
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: 80px 400px 1fr 250px;
+        grid-template-rows: 80px 1fr;
+        height: 100vh;
+        font-size: 24px;
+        color: #343a40;
+      }
+      nav,
+      header,
+      section,
+      main,
+      aside {
+        padding: 20px;
+      }
+      nav {
+        background-color: #343a40;
+        grid-row: 1/-1;
+        color: #fff;
+      }
+      header {
+        background-color: rgb(170, 151, 245);
+        grid-column: 2/-1;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 0 48px;
+      }
+      button {
+        background-color: #845ef7;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #fff;
+        border: none;
+        padding: 8px 12px;
+        display: inline-block;
+      }
+      button:last-child {
+        background-color: red;
+        margin-left: auto;
+      }
+      section {
+        background-color: #adb5bd;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        overflow-y: scroll;
+      }
+
+      .email {
+        background-color: #868e96;
+        padding: 20px 50px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      aside {
+        background-color: rgb(171, 170, 170);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>nav</nav>
+    <header>
+      <button>new</button>
+      <button>reply</button>
+      <button>forward</button>
+      <button>markunread</button>
+      <button>trash</button>
+    </header>
+
+    <section>
+      <div class="email">email 1</div>
+      <div class="email">email 2</div>
+      <div class="email">email 3</div>
+      <div class="email">email 4</div>
+      <div class="email">email 5</div>
+      <div class="email">email 6</div>
+      <div class="email">email 7</div>
+      <div class="email">email 8</div>
+      <div class="email">email 9</div>
+      <div class="email">email 10</div>
+    </section>
+    <main>email view</main>
+    <aside>additional info</aside>
+  </body>
+</html>

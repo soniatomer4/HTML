@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*--------------css elements-------------------*/
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  font-family: sans-serif;
+  color: #444;
+}
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: left;
+  font-style: italic;
+}
+h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+h4 {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+/* footer p {
+  font-size: 16px;
+} */
+/* article header p {
+  font-style: italic;
+} */
+
+/*-------------------css id-------------------------*/
+#copyright {
+  font-size: 16px;
+}
+#author {
+  font-style: italic;
+}
+/*-----------------------------css class--------------------*/
+.author-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+.related {
+  list-style: none;
+  margin-left: 0;
+}
+.main-part {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  /*shorthand*/
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 60px;
+  /* background-color: red; */
+}
+.post-part {
+  margin-bottom: 40px;
+}
+aside {
+  background-color: rgb(223, 221, 221);
+  border-top: 8px solid #1098ad;
+  border-bottom: 8px solid #1098ad;
+  padding: 50px 40px;
+  /* box-sizing: border-box; */
+}
+article {
+  margin-bottom: 40px;
+}
+body {
+  /*background-color: rgb(127, 208, 255);*/
+  border-top: #1098ad solid 4px;
+  border-bottom: #1098ad solid 4px;
+  position: relative;
+}
+/* .first-child {
+  font-weight: bold;
+} */
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+  margin-bottom: 0;
+}
+/* li:nth-child(even) {
+  color: red;
+} */
+/* article p:first-child {
+  color: red;                   misconception: not working
+} */
+/* article p:last-child {
+  color: red;
+} */
+
+/* ----------------------styling hyperlinks ----------------------------*/
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+a:visited {
+  /*color:#444;*/
+  color: #1098ad;
+}
+a:hover {
+  text-decoration: underline orangered;
+  color: orangered;
+  font-weight: bold;
+}
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+.post-img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  width: 1200px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+  position: relative;
+}
+nav a:link {
+  /* width: 50px; */
+  margin-right: 30px;
+  margin-top: 10px;
+  /* padding: 50px; */
+  display: inline-block;
+}
+nav a:link:last-child {
+  margin-right: 0;
+}
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+/* h3 + p::first-line {
+  adj siblings
+} */
+h2 {
+  position: relative;
+}
+h2::after {
+  content: "TOP";
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffe70e;
+  padding: 5px 10px;
+  color: #444;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+  display: inline-block;
+}
+nav {
+  font-size: 18px;
+  text-align: center; /*inline-block*/
+}
+
+/*------------------------ floats---------------------------*/
+/* .author {
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+h1 {
+  float: left;
+}
+nav {
+  float: right;
+}
+.clear {
+  clear: both;
+} 
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+article {
+  width: 700px;
+  float: left;
+}
+aside {
+  width: 300px;
+  float: right;
+}
+footer {
+  clear: both;
+} */
+
+/*--------------------------------------css flexbox--------------------------------------*/
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+.main-part {
+  grid-column: 1 / -1;
+}
+footer {
+  grid-column: 1/-1;
+}
